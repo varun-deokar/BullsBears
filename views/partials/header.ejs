@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bulls & Bears</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro|Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"> -->
+	<link rel='stylesheet' type='text/css' href="/css/Landing.css">
+</head>
+<body>
+	<nav class="navbar navbar-dark navbar-expand-md navbar-fixed-top">
+      <a class="navbar-brand ml-2" id='brand' href="#">B & B</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-collapse-1">
+        <ul class="navbar-nav navbar-right ml-auto" id='links'>
+          <li class="nav-item mr-5"><a class="nav-link" href="/about">About Us</a></li>
+          <li class="nav-item mr-5"><a class="nav-link" href="/rules"> Game Rules</a></li>
+          <% if(isAuthenticated) { %>
+            <li class="nav-item mr-5"><a class="nav-link" href="/logout">Logout</a></li>
+          <% } else { %>
+            <li class="nav-item mr-5"><a class="nav-link" href="/register">Register</a></li>
+            <li class="nav-item mr-5"><a class="nav-link" href="/login">Login</a></li>
+          <% } %>
+        </ul>
+      </div>
+  </nav>

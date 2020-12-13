@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules</title>
+</head>
+<body style='font-size: 18px;margin-bottom: 50px;background-color: rgb(238, 237, 237);'>
+    <h1 style='text-align:center;margin-bottom: 50px;'>Game rules </h1>
+    <h3 style='text-align:center;margin-bottom: 50px;'>B & B is a word guessing game which uses basic permutation and combination.</h3>
+
+<h2>Lets begin!!</h2> 
+<p>The computer randomly selects a 4 letter English-dictionary word which we have to find out by guessing 4 letter words of our own.
+To which the computer will give us a reply for in a table format of BULLS and BEARS.</p>
+
+<div>
+    <p><b> Rules for the 4 letters words which will be selected/guesses are:</b></p>
+    <ul>
+        <li>The word has to be a valid English word</li>
+        <li>The word cannot be a Proper noun</li>
+        <li>Letters in the word must be unique hence repitition is not allowed</li>
+    </ul>
+</div>
+<div>
+    <h3 style='text-align:center;margin: 50px 0;'><b>What does BULL mean ?</b> </h3>
+If the computer's 4 letter word has any common letters which are on the exact same position as in the word you have guessed then the computer will reply with a bull.<br>
+
+For Example:<br> 
+
+        The computer's word is REST<br>
+		The word you have guessed is BOLT<br> 
+		Then the computer's reply will be 1 bull as only The letter 'T' is common between the two words and the position of the letter 'T' is also the same in both the words.<br>
+		The final reply will be : <b>0 Bear and 1 Bull</b><br>
+		
+		Therefore, the number in the reply will indicate the number of common letters and the bull will mean that amount of letters are at the same position as well.
+		
+</div>
+<div>
+    <h3 style='text-align:center;margin: 50px 0;'><b>What does BEAR mean ?</b></h3>
+If the computer's 4 letter word has any common letters which are on NOT at the exact same position as in the word you have guessed then the computer will reply with a bear.<br>
+
+For Example: <br>
+        
+        The computer's word is REST<br>
+		The word you have guessed is LIAR<br>
+		Then the computer's reply will be 1 bear as only The letter 'R' is common between the two words and the position of the letter 'R' is not the same in both the words as in the computer's word it is on the 1st position and in the guessed word it is on the 4th position.<br>
+		The final reply will be : <b>1 Bear and 0 Bull</b><br>
+		
+		Therefore, the number in the reply will indicate the number of common letters and the bear will mean that amount of letters are NOT at the same position and that the common letters are at different positions.<br>
+
+</div>
+<div>
+    All the replies are a combination of BULLS and BEARS. <br>
+    For Example: <br>
+    
+            The computer's word is REST <br>
+            The word you have guessed is SPOT <br>
+            As 1 can see now there are 2 common letters in the words and the letter 'T' is on the same position in both the words which makes it a bull whereas the letter 'S' is NOT in the same position therefore it is a bear.<br>
+            The final reply will be : <b>1 Bear and 1 Bull</b><br>
+
+     Using these replies one can eliminate some letters and fix some letters in the word using permutation and combination and can accordingly ask the next word to increase the chances of guessing the word faster.
+
+</div>
+
+		
+
+<div>
+    <h3 style='text-align:center;margin-top: 50px;'><b>How to win or complete the game ?</b></h3>
+It is fairly simple you win the game when you have guessed the computers 4 letter word.<br>
+In other words, When the computers reply to your guess will be 4 Bulls that will imply that you have guessed the word.<br>
+
+When you get a 3 bull reply that will indicate that you are very close to the word only 1 letter is not the part of the computers word 
+</div>
+
+</body>
+</html>

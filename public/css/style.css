@@ -1,0 +1,25 @@
+table, th, td {
+	border: 3px solid black;
+	text-align: center;
+}
+
+body {
+	background-color: #e6e9ff;;
+}
+
+input {
+	box-sizing: border-box;
+	width: 88%;
+	margin: 20px 0;
+	padding: 10px;
+	
+}
+
+button {
+	height: 37.6px;
+	width: 11.5%;
+	background-color: black;
+	color: white;
+	outline: none;
+	border: none;
+}
