@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 var bodyParser = require("body-parser");
@@ -7,11 +8,13 @@ var localStrategy = require("passport-local");
 var authroute = require("./auth");
 var User = require("./user");
 var middleware = require("./middleware/middleware");
+var port = process.env.PORT || 3000;
+
 
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + "/public"))
 
-mongoose.connect('mongodb://localhost:27017/BullsBears', { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false });
+mongoose.connect(process.env.DATABASEURL, { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false });
 
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -49,6 +52,6 @@ app.get('/Game', middleware.isLoggedIn, (req, res) => {
     res.render('Game')
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Listening on port 3000")
 })

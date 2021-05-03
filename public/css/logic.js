@@ -519,10 +519,9 @@ var dict={
     400:'your',
     401:'zero',
     402:'zone'
-
 }
 
-var rand=getRandomArbitrary(1,402);
+var rand=getRandomArbitrary(1, 402);
 theword=dict[rand]
 theword=theword.toLowerCase()
 
