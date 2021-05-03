@@ -14,7 +14,7 @@ var port = process.env.PORT || 3000;
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + "/public"))
 
-mongoose.connect(process.env.DATABASEURL || 'mongodb://localhost:27017/BullsBears', { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false });
+mongoose.connect(process.env.DATABASEURL, { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false });
 
 app.use(bodyParser.urlencoded({extended: true}));
 
